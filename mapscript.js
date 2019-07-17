@@ -40,3 +40,34 @@
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
+
+///////////////////////////////////////////display xml file/////////////////////////////////////////////////////////////////
+              function loadDoc() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                        myFunction(this);
+                    }
+                };
+                xhttp.open("GET", "maps.php", true);
+                xhttp.send();
+              }
+
+            var i;
+            var table = "<thead><tr><th>Type</th><th>Name</th><th>Address</th><th>Latitude</th><th>Longitude</th></tr></thead>";
+            var x = document.getElementsByTagName("marker");
+            for (i = 0; i < x.length; i++) {
+                table += "<tbody><tr><td>" +
+                    x[i].getAttribute("type")+
+                    "</td><td>" +
+                    x[i].getAttribute("name")+
+                    "</td><td>" +
+                    x[i].getAttribute("address")+
+                    "</td><td>" +
+                    x[i].getAttribute("lat")+
+                    "</td><td>" +
+                    x[i].getAttribute("lng")+
+                    "</td><tr></tbody>";
+            }
+
+                document.getElementById("display").innerHTML = table;
