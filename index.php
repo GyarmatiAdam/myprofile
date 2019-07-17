@@ -1,4 +1,7 @@
-<!doctype html>
+
+<?php
+include_once "dbconnection.php";
+?><!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->

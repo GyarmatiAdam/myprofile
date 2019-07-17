@@ -1,3 +1,6 @@
+<?php
+include_once "dbconnection.php";
+?>
 <!doctype html>
 <html lang="en">
   <head>

@@ -13,8 +13,11 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#"><span class="sr-only"></span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="index.php"><span class="sr-only"></span></a>
+            </li><br>
+            <li class="nav-item">
+              <a class="nav-link" href="index.php">FACEBOOK</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="maps.php">GOOGLE MAPS</a>
@@ -29,3 +32,5 @@
           </form>
         </div>
       </nav>
+      <script src="fbscript.js"></script>
+
